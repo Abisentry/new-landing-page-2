@@ -1,7 +1,7 @@
 // components/TeamSection.jsx
 
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import assets from "@/public/assets/assets";
 
 const page = () => {

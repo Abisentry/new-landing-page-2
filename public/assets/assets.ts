@@ -14,6 +14,8 @@ import FeaturePoint from './featurepoint.png';
 import Customize from './Customize1.png';
 import Mark from './Iconmark.png';
 import Testimonial from './textimonial4.png';
+import Let from './let.png';
+
 import Star from './Star.png';
 import Kit from './kit.png'; // Updated property name to match convention
 import Abi1 from './abi1.png'; // Import statement for abi1
@@ -37,7 +39,8 @@ const assets = {
   Testimonial: Testimonial,
   Star: Star,
   Kit: Kit,
-  abi1: Abi1 // Corrected reference
+  let: Let,
+  abi1: Abi1, // Corrected reference
 };
 
 export default assets;

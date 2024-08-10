@@ -1,10 +1,11 @@
-'use client';
+         'use client';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Image from "next/image";
+
 import Link from 'next/link';
 import assets from "@/public/assets/assets";
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -16,28 +17,24 @@ export default function Home() {
 
   return (
     <main className="relative">
-     <Image
+      <Image
         src={assets.Ellips}
         alt=""
         className="absolute -top-60 right-10 hidden w-[60%] md:block"
-        layout="fill"
-        objectFit="cover"
+        fill // Replaces layout="fill"
+        style={{ objectFit: "cover" }} // Replaces objectFit="cover"
       />
 
       {/* Hero */}
       <div className="bg-[#323335ad] fixed top-0 left-0 right-0 z-50">
         <nav className="flex justify-between items-center py-5 px-10">
           <div className="hidden md:block">
-            <image
+            <Image
               alt="Brand Name"
               loading="lazy"
               width="158"
               height="36"
-              decoding="async"
-              data-nimg="1"
-              style={{ color: 'transparent' }}
-              srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAbiSentry.50063ab7.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAbiSentry.50063ab7.png&amp;w=384&amp;q=75 2x"
-              src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAbiSentry.50063ab7.png&amp;w=384&amp;q=75"
+              src="/_next/static/media/AbiSentry.50063ab7.png"
             />
           </div>
           <div className="hidden md:flex justify-between items-center text-[#FFFFFF] w-[50%] bg-[#57565aaf] rounded-full p-4">
@@ -51,24 +48,19 @@ export default function Home() {
               <a href="#service">Services</a>
             </div>
             <div>
-              <a href="#feature">Team
-              </a>
+              <a href="#feature">Team</a>
             </div>
             <div>
               <a href="#testimonial">Products</a>
             </div>
           </div>
           <a href="#home">
-            <image
+            <Image
               alt="Brand Image"
               loading="lazy"
               width="64"
               height="66"
-              decoding="async"
-              data-nimg="1"
-              style={{ color: 'transparent' }}
-              srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabisentry.1e2e2452.webp&amp;w=64&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabisentry.1e2e2452.webp&amp;w=128&amp;q=75 2x"
-              src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabisentry.1e2e2452.webp&amp;w=128&amp;q=75"
+              src="/_next/static/media/abisentry.1e2e2452.webp"
             />
           </a>
           <div className="md:hidden">
@@ -93,101 +85,82 @@ export default function Home() {
         <div className="bg-black flex flex-col text-xl text-white justify-center items-center"></div>
       </div>
       <main className="relative scroll-smooth">
-        <image
+        <Image
           alt=""
           loading="lazy"
           width="1189"
           height="1189"
-          decoding="async"
-          data-nimg="1"
           className="absolute -top-40 right-10 hidden w-[60%] md:block"
-          style={{ color: 'transparent' }}
-          srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=3840&amp;q=75 2x"
-          src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=3840&amp;q=75"
+          src="/_next/static/media/Ellipsefull.804e61a8.png"
         />
         <header id="home">
           <div className="md:flex px-5 sm:px-10 md:px-20 pt-40 md:pt-52">
             <div className="h-auto flex flex-col justify-end md:w-[60%]">
               <div className="flex">
                 <div className="flex flex-col justify-center items-center">
-                  <image
+                  <Image
                     alt=""
                     loading="lazy"
                     width="41"
                     height="171"
-                    decoding="async"
-                    data-nimg="1"
                     className="h-[80%]"
-                    style={{ color: 'transparent' }}
-                    srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGroup.a9761e72.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGroup.a9761e72.png&amp;w=96&amp;q=75 2x"
-                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGroup.a9761e72.png&amp;w=96&amp;q=75"
+                    src="/_next/static/media/Group.a9761e72.png"
                   />
                 </div>
                 <div className="text-5xl lg:text-6xl text-white h-auto w-auto font-extrabold">
                   <h2>Your Digital</h2>
                   <h2>Fortress | Guard</h2>
                   <p className="text-xs lg:text-base mt-4 font-medium">
-                    We are on quest to reinforce the digital world and guarantee the safety of our clients priceless assets, and we are fueled by a passion for security, AI and a team of highly skilled experts.
+                    We are on quest to reinforce the digital world and guarantee the safety of our clients priceless assets, and we are fueled by a passion for security, AI, and a team of highly skilled experts.
                   </p>
                 </div>
               </div>
               <a
-       className="text-white md:ms-10 mb-5 md:mb-10 mt-5 md:mt-[5%] bg-gradient-to-r from-[#00A7D6] to-[#0A767B] w-48 px-4 py-2 rounded-lg"
-       href="https://calendly.com/abisentry/answer"
-       target="_blank"
-        rel="noopener noreferrer"
-       >
-        Get in Touch
-      </a>
-
+                className="text-white md:ms-10 mb-5 md:mb-10 mt-5 md:mt-[5%] bg-gradient-to-r from-[#00A7D6] to-[#0A767B] w-48 px-4 py-2 rounded-lg"
+                href="https://calendly.com/abisentry/answer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get in Touch
+              </a>
             </div>
             <div className="relative md:w-[40%]">
-  <image
-    alt=""
-    loading="lazy"
-    width="1189"
-    height="1189"
-    decoding="async"
-    data-nimg="1"
-    className="absolute -top-20 right-0 md:hidden"
-    style={{ color: 'transparent' }}
-    srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=3840&amp;q=75 2x"
-    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEllipsefull.804e61a8.png&amp;w=3840&amp;q=75"
-  />
-  <image
-    alt=""
-    loading="lazy"
-    width="530"
-    height="530"
-    decoding="async"
-    data-nimg="1"
-    className="w-[500px]"
-    style={{ color: 'transparent' }}
-    srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FheroImage.e4faeb64.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FheroImage.e4faeb64.png&amp;w=1080&amp;q=75 2x"
-    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FheroImage.e4faeb64.png&amp;w=1080&amp;q=75"
-  />
-</div>
-
+              <Image
+                alt=""
+                loading="lazy"
+                width="1189"
+                height="1189"
+                className="absolute -top-20 right-0 md:hidden"
+                src="/_next/static/media/Ellipsefull.804e61a8.png"
+              />
+              <Image
+                alt=""
+                loading="lazy"
+                width="530"
+                height="530"
+                className="w-[500px]"
+                src="/_next/static/media/heroImage.e4faeb64.png"
+              />
+            </div>
           </div>
         </header>
-      
 
-      {/* About Us */}
-      <section className="px-5 sm:px-10 md:px-20 mb-20">
-        <div className="lg:flex justify-between">
-          <div className="lg:w-[48%]">
-            <Image src={assets.cyberSecurity} alt="cyber security" />
+        {/* About Us */}
+        <section className="px-5 sm:px-10 md:px-20 mb-20">
+          <div className="lg:flex justify-between">
+            <div className="lg:w-[48%]">
+              <Image src={assets.cyberSecurity} alt="cyber security" />
+            </div>
+            <div className="lg:w-[48%]">
+              <h6 className="text-[#3ED5DD]">OUR QUEST</h6>
+              <h1 className="text-2xl lg:text-3xl xl:text-5xl text-white font-semibold mt-4">
+                Advanced AI Driven Solutions
+              </h1>
+              <p className="mt-4 text-lg lg:text-base xl:text-lg text-white">
+                Abisentry's Advanced AI Driven Solutions effectively prevent breaches, fraud, and other cyber threats.
+              </p>
+            </div>
           </div>
-          <div className="lg:w-[48%]">
-            <h6 className="text-[#3ED5DD]">OUR QUEST</h6>
-            <h1 className="text-2xl lg:text-3xl xl:text-5xl text-white font-semibold mt-4">
-             Advanced AI Driven Solutions 
-            </h1>
-            <p className="mt-4 text-lg lg:text-base xl:text-lg text-white">
-             Abisentrys Advanced AI Driven Solutions Effectively prevents breaches, fraud and other cyber threats.
-           </p>
-          </div>
-        </div>
         {/* <div className="flex justify-center mt-10 ">
           <div
             className={`${aboutGradient} w-[100%] rounded-2xl px-9 py-3 flex justify-between items-center`}
@@ -631,10 +604,10 @@ export default function Home() {
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">OUR PRODUCT</h6>
               <h2 className="text-5xl text-white my-2">
-                See What Others People Are Saying
+              Checkout our Ai fortified products to protect your business 
               </h2>
               <h5 className="text-white">
-               Checkout our Ai fortified products to protect your business 
+              
               </h5>
             </div>
           </div>
@@ -645,7 +618,7 @@ export default function Home() {
                 {" "}
               </p>
               <div className="flex items-center mt-3">
-                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <Image src={assets.let} alt="" width={70} height={70} />
                 <div className="ms-3">
                   <h1 className="text-xl">Marianne Bode</h1>
                   <h6 className="my-1">Product </h6>
@@ -684,7 +657,7 @@ export default function Home() {
                 {" "}
               </p>
               <div className="flex items-center mt-3">
-                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <Image src={assets.let} alt="" width={70} height={70} />
                 <div className="ms-3">
                   <h1 className="text-xl">Marianne Bode</h1>
                   <h6 className="my-1">Product Fight Fraud</h6>
@@ -723,7 +696,7 @@ export default function Home() {
               Checkout our AI fortified products to protect your business.{" "}
               </p>
               <div className="flex items-center mt-3">
-                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <Image src={assets.let } alt="" width={70} height={70} />
                 <div className="ms-3">
                   <h1 className="text-xl">Marianne Bode</h1>
                   <h6 className="my-1">Product Intranet Agent</h6>
@@ -762,7 +735,7 @@ export default function Home() {
                  {" "}
               </p>
               <div className="flex items-center mt-3">
-                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <Image src={assets.let} alt="" width={70} height={70} />
                 <div className="ms-3">
                   <h1 className="text-xl">Marianne Bode</h1>
                   <h6 className="my-1">Product Intranet Agent</h6>
@@ -830,18 +803,20 @@ export default function Home() {
         <div className="px-5 sm:px-10 md:px-20 py-10 mt-10">
   <div className="md:flex justify-between items-start mb-7">
   <div className="flex items-center">
-  <image
-    src="./assets/kit.png"
+  <Image
+    src="/assets/kit.png" // Ensure the correct path based on your project's structure
     alt=""
-    
+    width={290} // Replace style with width and height props
+    height={156}
     loading="lazy"
     decoding="async"
-    data-nimg="1"
-    style={{ width: '290px', height: '156px', color: 'transparent' }} // Adjust these values as needed
+    style={{ color: 'transparent' }}
   />
-      <h3 className="text-white text-4xl ms-5">
-      </h3>
-    </div>
+  <h3 className="text-white text-4xl ms-5">
+    {/* Add content here if needed */}
+  </h3>
+</div>
+
     <div className="md:w-[60%] text-white mt-5 md:mt-0">
       <h3 className="text-2xl mb-5">Newsletter</h3>
       <form action="">
